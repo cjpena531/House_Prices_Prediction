@@ -59,7 +59,7 @@ gbr_rmse = mean_squared_error(y_test, gbc_preds)**(1/2)
 gbr_mae = median_absolute_error(y_test, gbc_preds)
 gbr_r2 = r2_score(y_test, gbc_preds)
 
-print("4/8 ... Finished Gradient Boosting Regressor")
+print("4/8 ... Finished gradient boosting regressor")
 
 #################################################
 #Dummy Mean/Median Regressor on Transformed data#
@@ -108,7 +108,7 @@ las_rmse = mean_squared_error(y_test, las_preds)**(1/2)
 las_mae = median_absolute_error(y_test, las_preds)
 las_r2 = r2_score(y_test, las_preds)
 
-print("7/8 ... Finished Lasso Regression")
+print("7/8 ... Finished lasso regression")
 
 ###############
 #Random Forest#
@@ -123,7 +123,7 @@ rfr_rmse = mean_squared_error(y_test, rfr_preds)**(1/2)
 rfr_mae = median_absolute_error(y_test, rfr_preds)
 rfr_r2 = r2_score(y_test, rfr_preds)
 
-print("8/8 ... Finished Random Forest")
+print("8/8 ... Finished random forest")
 
 #################
 #Models' Summary#
@@ -137,7 +137,6 @@ data = [[dme_rmse, dme_mae, dme_r2],
 
 Model_Performance = pd.DataFrame(data, index=['Dummy Mean Regressor','Dummy Median Regressor','Gradient Boosting Regressor','XGBoost','Lasso','Random Forest'],columns=['RMSE', 'MAE', 'R2'])
 
-display(Model_Performance)
 print(Model_Performance)
 
 
