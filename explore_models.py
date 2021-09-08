@@ -40,7 +40,7 @@ argentina['created_on'] = pd.to_datetime(argentina['created_on'])
 #OHE columns: l1, l2, l3, price_period, property_type, operation_type
 arg2 = argentina.drop('l3', axis=1)
 
-categorical_cols = ['l1', 'l2', 'price_period', 'property_type', 'operation_type'] 
+categorical_cols = ['l1', 'l2', 'property_type', 'operation_type'] 
 
 arg3 = pd.get_dummies(arg2, columns = categorical_cols, dtype=int)
 
